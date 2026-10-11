@@ -13,27 +13,14 @@ images/                fotoğraflar ve ikonlar
 
 Derleme adımı yok, bağımlılık yok. `index.html` dosyasını tarayıcıda açmak yeterli.
 
+## Bölümler
+
+Kimlik · Vizyon · Birim yapısı · Başarılar · Galeri · Yapay Zeka · İletişim
+
 ## Vercel'e yayınlama
 
 Statik site olduğu için ayar gerekmez:
 
 1. vercel.com → Add New → Project → `btkimeje` reposunu içe aktar
-2. Framework Preset: **Other**, Build Command: boş, Output Directory: boş
+2. Framework Preset: **Other**, Build Command ve Output Directory boş
 3. Deploy
-
-## İçerik bekleyen alanlar
-
-Sayfada kesik çizgili çerçeveyle işaretli bölümler doldurulmayı bekliyor:
-
-- 9 temel doktrin metni (D-01 … D-09)
-- Proje kayıtları 02 ve 03
-- Başarıların kesin tarihleri
-- Başvuru süreci bilgisi
-
-## Eksik görseller
-
-Aşağıdaki dosyalar `images/` klasörüne eklendiğinde galeride otomatik görünür:
-
-- `cop31.jpg` — Climate iDEAthon 2026 ödül töreni
-- `mavera.jpg` — MAVERA proje sunumu
-- `ideathon-ekip.jpg` — Climate iDEAthon yarışma kadrosu

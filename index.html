@@ -6,7 +6,7 @@
 <title>İMEJE Mühendislik Takımı</title>
 <meta name="description" content="İMEJE — askeri elektronik harp sistemleri geliştiren bağımsız öğrenci mühendislik takımı. BTK Akademi Yapay Zeka Eğitimi projesi.">
 <link rel="icon" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#E8EBEF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E141B" media="(prefers-color-scheme: dark)">
@@ -22,34 +22,31 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Saira+Condensed:wght@600;700&display=swap">
 <style>
 :root{
-  --bg:#E8EBEF; --surface:#F7F8FA; --surface-2:#FFFFFF;
+  --bg:#E8EBEF; --surface:#F7F8FA;
   --ink:#0F1720; --ink-2:#46525F; --ink-3:#7A8793;
   --line:#C8CFD7; --line-strong:#9AA5B1;
   --accent:#B3121F; --accent-soft:rgba(179,18,31,.09); --on-accent:#FFFFFF;
-  --signal:#0E6E78; --signal-soft:rgba(14,110,120,.12);
-  --grid:rgba(70,82,95,.16);
+  --signal:#0E6E78;
   --display:"Saira Condensed","Arial Narrow",Impact,sans-serif;
   --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
   --mono:"IBM Plex Mono",Consolas,monospace;
-  --wrap:1120px;
+  --wrap:1080px;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0E141B; --surface:#141C25; --surface-2:#1A242F;
+    --bg:#0E141B; --surface:#141C25;
     --ink:#E8EDF2; --ink-2:#9DAAB7; --ink-3:#6B7886;
     --line:#26323D; --line-strong:#3A4854;
     --accent:#FF4D5E; --accent-soft:rgba(255,77,94,.13); --on-accent:#120509;
-    --signal:#35C4CE; --signal-soft:rgba(53,196,206,.14);
-    --grid:rgba(157,170,183,.14);
+    --signal:#35C4CE;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0E141B; --surface:#141C25; --surface-2:#1A242F;
+  --bg:#0E141B; --surface:#141C25;
   --ink:#E8EDF2; --ink-2:#9DAAB7; --ink-3:#6B7886;
   --line:#26323D; --line-strong:#3A4854;
   --accent:#FF4D5E; --accent-soft:rgba(255,77,94,.13); --on-accent:#120509;
-  --signal:#35C4CE; --signal-soft:rgba(53,196,206,.14);
-  --grid:rgba(157,170,183,.14);
+  --signal:#35C4CE;
 }
 
 *{box-sizing:border-box}
@@ -67,9 +64,9 @@ a{color:inherit}
 .mark img{width:26px;height:26px;object-fit:contain}
 .mark b{font:700 24px/1 var(--display);letter-spacing:.06em}
 .mark span{font:500 9.5px/1 var(--mono);color:var(--ink-3);letter-spacing:.13em}
-.nav{display:flex;gap:1px;flex-wrap:wrap}
-.nav a{font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;padding:8px;border-radius:2px}
-.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;padding:8px 9px;border-radius:2px}
+.nav a:hover{color:var(--ink);background:var(--surface)}
 .nav a[aria-current="true"]{color:var(--accent);background:var(--accent-soft)}
 .prog{height:2px;background:var(--accent);width:0}
 .menu{display:none;width:42px;height:38px;padding:0;border:1px solid var(--line-strong);border-radius:2px;background:transparent;color:var(--ink);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
@@ -94,23 +91,21 @@ p{max-width:68ch}
 
 /* hero */
 .hero{padding-block:46px 54px}
-.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:38px;align-items:center}
-.hero h1{margin:0;font:700 clamp(62px,13vw,132px)/.84 var(--display);letter-spacing:.015em;text-transform:uppercase}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.hero h1{margin:0;font:700 clamp(62px,13vw,128px)/.84 var(--display);letter-spacing:.015em;text-transform:uppercase}
 .hero h1 i{font-style:normal;color:var(--accent)}
 .hero__sub{font-size:19px;color:var(--ink-2);max-width:45ch;margin:18px 0 0}
 .tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:6px 11px;border:1px solid var(--line-strong);border-radius:2px;font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
 .tag em{font-style:normal;color:var(--accent)}
 .motto{margin:24px 0 0;padding:12px 0 12px 18px;border-left:3px solid var(--accent);font:600 21px/1.3 var(--display);letter-spacing:.05em;text-transform:uppercase}
 .motto small{display:block;font:400 12px/1.5 var(--mono);letter-spacing:.04em;text-transform:none;color:var(--ink-3);margin-top:6px}
-.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0 0}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0 0}
 .specs div{background:var(--bg);padding:12px 14px}
 .specs dt{font:500 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px}
 .specs dd{margin:0;font:600 19px/1.15 var(--display);letter-spacing:.04em;text-transform:uppercase;font-variant-numeric:tabular-nums}
-.scope{margin:0;border:1px solid var(--line);background:var(--surface);padding:11px}
-.scope__hdr{display:flex;justify-content:space-between;gap:12px;font:500 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
-.scope__hdr b{color:var(--signal);font-weight:500}
-.scope canvas{display:block;width:100%;height:258px}
-.scope figcaption{font:400 10.5px/1.5 var(--mono);color:var(--ink-3);margin-top:9px}
+.hero figure{margin:0;border:1px solid var(--line);background:var(--surface)}
+.hero figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:1px solid var(--line)}
+.hero figcaption{padding:11px 14px;font:400 11.5px/1.55 var(--mono);color:var(--ink-3);letter-spacing:.03em}
 
 /* iki sütun */
 .two{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:34px;align-items:start}
@@ -131,63 +126,43 @@ p{max-width:68ch}
 .person::before{content:"";width:5px;height:5px;background:var(--signal);flex:none}
 .note{margin:20px 0 0;font:400 13px/1.6 var(--mono);color:var(--ink-3);border-left:1px solid var(--line-strong);padding-left:14px;max-width:72ch}
 
-/* doktrin */
-ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);padding:0;margin:0}
-.doctrine li{background:var(--bg);padding:16px 18px;list-style:none;min-height:92px}
-.doctrine .n{font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--accent)}
-.doctrine .t{display:block;margin-top:9px;font:600 17px/1.22 var(--display);letter-spacing:.03em;text-transform:uppercase;color:var(--ink-3)}
-.doctrine .e{display:block;margin-top:6px;font:400 12px/1.5 var(--mono);color:var(--ink-3)}
-
-/* kartlar / boş alanlar */
-.grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
-.card{border:1px solid var(--line);background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:11px}
-.card h3{margin:0;font:600 22px/1.12 var(--display);letter-spacing:.03em;text-transform:uppercase}
-.card p{margin:0;font-size:14.5px;color:var(--ink-2)}
-.slot{border:1px dashed var(--line-strong);background:transparent}
-.slot h3{color:var(--ink-3)}
-.chip{align-self:flex-start;font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line-strong);padding:5px 8px;border-radius:2px}
-.chip.on{color:var(--on-accent);background:var(--accent);border-color:var(--accent)}
-.fields{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
-.fields li{display:flex;gap:10px;font:400 12.5px/1.5 var(--mono);color:var(--ink-2);align-items:baseline}
-.fields b{flex:none;width:92px;color:var(--ink-3);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:10px}
-.fields i{flex:1;font-style:normal;min-height:1.4em}
-.fields i:empty{border-bottom:1px dotted var(--line-strong)}
-.fields a{color:var(--signal);text-decoration:none;border-bottom:1px solid var(--signal-soft);word-break:break-all}
-.fields a:hover{border-bottom-color:var(--signal)}
-
 /* başarılar */
 .time{margin:0;padding:0;list-style:none;border-left:1px solid var(--line)}
 .time li{position:relative;padding:0 0 22px 26px}
+.time li:last-child{padding-bottom:0}
 .time li::before{content:"";position:absolute;left:-4.5px;top:7px;width:8px;height:8px;background:var(--bg);border:1.5px solid var(--accent);border-radius:50%}
 .time .y{font:500 11px/1 var(--mono);letter-spacing:.12em;color:var(--accent)}
 .time .b{margin-top:7px;border:1px solid var(--line);background:var(--surface);padding:14px 16px}
-.time .b.pending{border-style:dashed;border-color:var(--line-strong);background:transparent}
 .time .b strong{display:block;font:600 19px/1.18 var(--display);letter-spacing:.03em;text-transform:uppercase}
-.time .b.pending strong{color:var(--ink-3)}
 .time .b span{display:block;margin-top:6px;font:400 12.5px/1.6 var(--mono);color:var(--ink-3)}
 
 /* galeri */
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(286px,1fr));gap:16px}
 .gal figure{margin:0;border:1px solid var(--line);background:var(--surface)}
-.gal .ph{display:none}
-.gal figure.no-img .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;max-width:100%;border-bottom:1px dashed var(--line-strong);font:500 10px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);text-align:center;padding:16px}
-.gal figure.no-img img{display:none}
-.gal img{aspect-ratio:16/10;object-fit:cover;width:100%;max-width:100%;border-bottom:1px solid var(--line)}
+.gal img{aspect-ratio:16/10;object-fit:cover;width:100%;border-bottom:1px solid var(--line)}
 .gal figcaption{padding:12px 14px;font:400 12.5px/1.55 var(--mono);color:var(--ink-2)}
 .gal figcaption b{display:block;font:600 16px/1.2 var(--display);letter-spacing:.03em;text-transform:uppercase;color:var(--ink);margin-bottom:5px}
 .gal figure.wide{grid-column:span 2}
 
 /* yapay zeka */
-.ai{display:grid;grid-template-columns:repeat(auto-fill,minmax(256px,1fr));gap:18px}
+.ai{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px;margin-top:6px}
 .ai article{border-top:2px solid var(--signal);padding-top:14px}
 .ai h3{margin:0 0 8px;font:600 19px/1.16 var(--display);letter-spacing:.03em;text-transform:uppercase}
 .ai p{margin:0;font-size:14.5px;color:var(--ink-2)}
 .ai .k{display:block;font:500 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--signal);margin-bottom:9px}
 
-/* iletişim + alt bilgi */
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px;align-items:start}
-.draft{display:flex;gap:12px;align-items:flex-start;margin:32px 0 0;padding:14px 16px;border:1px solid var(--line-strong);border-left:3px solid var(--accent);background:var(--surface);font:400 13px/1.6 var(--mono);color:var(--ink-2);max-width:80ch}
-.draft b{flex:none;color:var(--accent);font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:11px;padding-top:2px}
+/* iletişim */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:20px;align-items:start}
+.card{border:1px solid var(--line);background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:12px}
+.chip{align-self:flex-start;font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line-strong);padding:5px 8px;border-radius:2px}
+.fields{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.fields li{display:flex;gap:10px;font:400 13px/1.55 var(--mono);color:var(--ink-2);align-items:baseline}
+.fields b{flex:none;width:94px;color:var(--ink-3);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:10px}
+.fields i{flex:1;font-style:normal;min-width:0;word-break:break-word}
+.fields a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent}
+.fields a:hover{border-bottom-color:var(--signal)}
+
+/* alt bilgi */
 .foot{border-top:1px solid var(--line);background:var(--surface)}
 .foot__in{max-width:var(--wrap);margin:0 auto;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
 .foot__in p{margin:0;font:400 12px/1.6 var(--mono);color:var(--ink-3);letter-spacing:.04em}
@@ -199,8 +174,6 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
   .head__d{text-align:left}
   .gal figure.wide{grid-column:span 1}
 }
-
-/* mobil menü */
 @media (max-width:860px){
   .bar__in{padding:8px 16px;gap:10px}
   .menu{display:flex}
@@ -212,21 +185,18 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
 @media (max-width:620px){
   .wrap,.bar__in,.foot__in{padding-inline:16px}
   section{padding-block:42px;scroll-margin-top:72px}
-  .hero{padding-block:34px 42px}
+  .hero{padding-block:32px 42px}
   .hero__sub{font-size:17px}
   .lede{font-size:16.5px}
-  .scope{padding:9px}
-  .scope canvas{height:190px}
   .specs{grid-template-columns:repeat(2,1fr)}
   .mark span{display:none}
-  .gal,.grid3,.contact{grid-template-columns:1fr}
-  .fields b{width:78px}
-  .draft{flex-direction:column;gap:6px}
+  .gal,.contact{grid-template-columns:1fr}
+  .fields b{width:80px}
   .foot__in{flex-direction:column;gap:8px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  *{transition-duration:.001ms!important}
 }
 </style>
 </head>
@@ -245,8 +215,6 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
       <a href="#kimlik">Kimlik</a>
       <a href="#vizyon">Vizyon</a>
       <a href="#birimler">Birimler</a>
-      <a href="#doktrin">Doktrin</a>
-      <a href="#projeler">Projeler</a>
       <a href="#basarilar">Başarılar</a>
       <a href="#galeri">Galeri</a>
       <a href="#yapay-zeka">Yapay Zeka</a>
@@ -275,11 +243,9 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
           <div><dt>Faaliyet alanı</dt><dd>Elektronik harp</dd></div>
         </dl>
       </div>
-
-      <figure class="scope">
-        <div class="scope__hdr"><span>SPEKTRUM İZLEME · X-BANDI</span><b>RBW 1 MHz</b></div>
-        <canvas id="scope" width="640" height="258" role="img" aria-label="X-bandı spektrum grafiği: 8 ila 12 gigahertz arasında gürültü tabanı üzerinde üç taşıyıcı tepesi."></canvas>
-        <figcaption>8.0–12.0 GHz / −90…−10 dBm · temsilî gösterim</figcaption>
+      <figure>
+        <img src="images/astro-final.jpg" alt="İMEJE Team bayrağını tutan beş kişilik takım kadrosu, yarışma salonunda." width="1091" height="794">
+        <figcaption>İMEJE Team kadrosu · TUA ASTRO Hackathon</figcaption>
       </figure>
     </div>
   </section>
@@ -296,7 +262,7 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
       <div>
         <p class="lede">İMEJE; Arda Öztürk liderliğinde, üniversitemizde yeterli teknik çalışma alanı bulunmaması üzerine kendi çabalarıyla bir araya gelen ve kurduğu atölye imkânlarıyla doğrudan askeri elektronik harp sistemleri geliştirmeye odaklanan bağımsız bir öğrenci mühendislik takımıdır.</p>
         <p>Gazi Mustafa Kemal Atatürk’ün akıl ve bilimi rehber kılan vizyonunu temel alan ekibimiz; TEKNOFEST ve EFES Tatbikatı gibi platformlarda projeleriyle yer almayı, milli savunma teknolojilerine atölye masasından somut katkı sunmayı hedefler.</p>
-        <p>Takım hiyerarşisine, disiplinine ve taşıdığı formanın ağırlığına derin saygı duyan ekibimiz; bireysel öncelikleri değil, güçlü takım yapısını ve ortak başarıyı her şeyin üzerinde tutar.</p>
+        <p>Çalışma kültürümüzün merkezinde “Pressure makes diamonds” felsefesi yer alır. İMEJE’nin her bir üyesi, belirlenen 9 temel doktrine koşulsuz bağlıdır. Takım hiyerarşisine, disiplinine ve taşıdığı formanın ağırlığına derin saygı duyan ekibimiz; bireysel öncelikleri değil, güçlü takım yapısını ve ortak başarıyı her şeyin üzerinde tutar.</p>
       </div>
       <blockquote class="quote">
         <p>Akıl ve bilimi rehber kılan bir vizyon; atölye masasından milli savunmaya somut katkı.</p>
@@ -375,85 +341,20 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
     <p class="note">Takım liderliği: Arda Öztürk. Birim sorumluları teknik yürütmeden, yönetim ise doktrin bütünlüğünden ve takım disiplininden sorumludur.</p>
   </section>
 
-  <section id="doktrin">
-    <div class="head">
-      <div class="head__t">
-        <p class="eyebrow">Doktrin</p>
-        <h2>9 temel doktrin</h2>
-      </div>
-      <p class="head__d">KOŞULSUZ BAĞLILIK<br>D-01 … D-09</p>
-    </div>
-    <p class="lede">İMEJE’nin her bir üyesi, belirlenen 9 temel doktrine koşulsuz bağlıdır. Doktrin metinleri aşağıdaki sıralı yapıya işlenecektir.</p>
-    <ul class="doctrine">
-      <li><span class="n">D-01</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-02</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-03</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-04</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-05</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-06</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-07</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-08</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-      <li><span class="n">D-09</span><span class="t">Doktrin başlığı</span><span class="e">metin bekleniyor</span></li>
-    </ul>
-  </section>
-
-  <section id="projeler">
-    <div class="head">
-      <div class="head__t">
-        <p class="eyebrow">Projeler</p>
-        <h2>Projelerimiz</h2>
-      </div>
-      <p class="head__d">ATÖLYE ÇIKTILARI<br>EH · YAZILIM</p>
-    </div>
-    <p class="lede">Atölyeden çıkan projeler ve yarışmalara taşınan çalışmalar. Boş alanlar, proje bilgileri iletildikçe doldurulacaktır.</p>
-    <div class="grid3">
-      <article class="card">
-        <span class="chip on">Yarışmaya sunuldu</span>
-        <h3>MAVERA</h3>
-        <p>Climate iDEAthon 2026 kapsamında İMEJE tarafından sunulan proje.</p>
-        <ul class="fields">
-          <li><b>Platform</b><i>Climate iDEAthon 2026 · Trabzon</i></li>
-          <li><b>Durum</b><i>Sunum tamamlandı</i></li>
-          <li><b>Özet</b><i></i></li>
-        </ul>
-      </article>
-      <article class="card slot">
-        <span class="chip">Proje kaydı 02</span>
-        <h3>Proje adı</h3>
-        <ul class="fields">
-          <li><b>Birim</b><i></i></li>
-          <li><b>Durum</b><i></i></li>
-          <li><b>Yıl</b><i></i></li>
-          <li><b>Özet</b><i></i></li>
-        </ul>
-      </article>
-      <article class="card slot">
-        <span class="chip">Proje kaydı 03</span>
-        <h3>Proje adı</h3>
-        <ul class="fields">
-          <li><b>Birim</b><i></i></li>
-          <li><b>Durum</b><i></i></li>
-          <li><b>Yıl</b><i></i></li>
-          <li><b>Özet</b><i></i></li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
   <section id="basarilar">
     <div class="head">
       <div class="head__t">
         <p class="eyebrow">Başarılar</p>
         <h2>Başarılarımız</h2>
       </div>
-      <p class="head__d">DERECE · KATILIM<br>KRONOLOJİK KAYIT</p>
+      <p class="head__d">DERECE · TEMSİL<br>YARIŞMA KAYITLARI</p>
     </div>
     <ol class="time">
       <li>
         <span class="y">TUA ASTRO HACKATHON</span>
         <div class="b">
           <strong>İkincilik Ödülü</strong>
-          <span>Türkiye Uzay Ajansı ASTRO Hackathon · Trabzon · ödül töreni</span>
+          <span>Türkiye Uzay Ajansı ASTRO Hackathon · Trabzon</span>
         </div>
       </li>
       <li>
@@ -464,21 +365,13 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
         </div>
       </li>
       <li>
-        <span class="y">BAKANLIK ZİYARETİ</span>
+        <span class="y">PROTOKOL ZİYARETİ</span>
         <div class="b">
-          <strong>Stant ziyareti</strong>
-          <span>Takım çalışma masasının bakanlık düzeyinde ziyaret edilmesi ve proje tanıtımı</span>
-        </div>
-      </li>
-      <li>
-        <span class="y">YIL</span>
-        <div class="b pending">
-          <strong>Başarı başlığı</strong>
-          <span>platform / derece / kısa açıklama — bilgi bekleniyor</span>
+          <strong>Takım masasında proje tanıtımı</strong>
+          <span>Çalışma masamızın bakanlık düzeyinde ziyaret edilmesi ve projelerin yerinde tanıtılması</span>
         </div>
       </li>
     </ol>
-    <p class="draft"><b>Not</b> Yukarıdaki kayıtların tarih ve derece bilgileri fotoğraflardan okunduğu şekliyle yazılmıştır; kesin tarihleri iletirsen güncellerim.</p>
   </section>
 
   <section id="galeri">
@@ -491,42 +384,26 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
     </div>
     <div class="gal">
       <figure class="wide">
-        <div class="ph">Görsel bekleniyor<br>images/bakan-ziyareti.jpg</div>
-        <img src="images/bakan-ziyareti.jpg" alt="Takım masasında proje tanıtımı yapan İMEJE üyesi ve ziyaretçi heyet." loading="lazy">
-        <figcaption><b>Stant ziyareti</b>Takım masasında yürütülen çalışmaların protokol heyetine tanıtılması.</figcaption>
+        <img src="images/bakan-ziyareti.jpg" alt="Takım masasında proje tanıtımı yapan İMEJE üyesi ve ziyaretçi protokol heyeti." loading="lazy" width="1151" height="719">
+        <figcaption><b>Protokol ziyareti</b>Takım masasında yürütülen çalışmaların yerinde tanıtılması.</figcaption>
       </figure>
       <figure>
-        <div class="ph">Görsel bekleniyor<br>images/astro-ikincilik.jpg</div>
-        <img src="images/astro-ikincilik.jpg" alt="Sahnede İkincilik Ödülü tabelasını tutan İMEJE ekibi." loading="lazy">
+        <img src="images/astro-ikincilik.jpg" alt="Sahnede İkincilik Ödülü tabelasını tutan İMEJE ekibi." loading="lazy" width="1536" height="2048">
         <figcaption><b>İkincilik ödülü</b>TUA ASTRO Hackathon ödül töreni, Trabzon.</figcaption>
       </figure>
       <figure>
-        <div class="ph">Görsel bekleniyor<br>images/astro-final.jpg</div>
-        <img src="images/astro-final.jpg" alt="İMEJE Team bayrağını tutan beş kişilik ekip, ASTRO Hackathon salonunda." loading="lazy">
-        <figcaption><b>ASTRO Hackathon finali</b>İMEJE Team kadrosu, yarışma salonu.</figcaption>
-      </figure>
-      <figure>
-        <div class="ph">Görsel bekleniyor<br>images/atolye-calisma.jpg</div>
-        <img src="images/atolye-calisma.jpg" alt="Gece boyunca dizüstü bilgisayarlarla çalışan ekip üyeleri." loading="lazy">
-        <figcaption><b>Gece mesaisi</b>Yarışma süresince kesintisiz yazılım ve analiz çalışması.</figcaption>
-      </figure>
-      <figure>
-        <div class="ph">Görsel bekleniyor<br>images/cop31.jpg</div>
-        <img src="images/cop31.jpg" alt="Climate iDEAthon ödül töreninde COP31 panosunu tutan ekip." loading="lazy">
+        <img src="images/cop31.jpg" alt="Climate iDEAthon ödül töreninde COP31 panosunu tutan İMEJE ekibi ve protokol." loading="lazy" width="477" height="300">
         <figcaption><b>COP31 ödülü</b>Climate iDEAthon 2026 ödül töreni, Trabzon.</figcaption>
       </figure>
       <figure>
-        <div class="ph">Görsel bekleniyor<br>images/mavera.jpg</div>
-        <img src="images/mavera.jpg" alt="MAVERA projesinin sahnede sunumu." loading="lazy">
-        <figcaption><b>MAVERA sunumu</b>Proje sunumu, Climate iDEAthon 2026.</figcaption>
+        <img src="images/mavera.jpg" alt="MAVERA projesinin sahnede sunumu, perdede proje adı görünüyor." loading="lazy" width="435" height="300">
+        <figcaption><b>MAVERA sunumu</b>Proje sunumu · Climate iDEAthon 2026.</figcaption>
       </figure>
       <figure>
-        <div class="ph">Görsel bekleniyor<br>images/ideathon-ekip.jpg</div>
-        <img src="images/ideathon-ekip.jpg" alt="Climate iDEAthon alanında dört kişilik İMEJE ekibi." loading="lazy">
-        <figcaption><b>Yarışma kadrosu</b>Climate iDEAthon 2026 etkinlik alanı.</figcaption>
+        <img src="images/atolye-calisma.jpg" alt="Gece boyunca dizüstü bilgisayarlarla çalışan ekip üyeleri." loading="lazy" width="1200" height="861">
+        <figcaption><b>Gece mesaisi</b>Yarışma süresince kesintisiz yazılım ve analiz çalışması.</figcaption>
       </figure>
     </div>
-    <p class="draft"><b>Görsel</b> Kesik çerçeveli kutular, <code>images/</code> klasörüne aynı adla dosya eklendiğinde otomatik olarak fotoğrafa dönüşür.</p>
   </section>
 
   <section id="yapay-zeka">
@@ -537,25 +414,24 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
       </div>
       <p class="head__d">EĞİTİM ÇIKTISI<br>BİRİMLERE YANSIMA</p>
     </div>
-    <p class="lede">Bu sayfa, BTK Akademi Yapay Zeka Eğitimi kapsamında hazırlanmıştır. Eğitimde edinilen yetkinliklerin takım birimlerine yansıması aşağıdaki başlıklar altında toplanacaktır.</p>
+    <p class="lede">Bu sayfa, BTK Akademi Yapay Zeka Eğitimi kapsamında hazırlanmıştır. Eğitimde edinilen yetkinliklerin takım birimlerinde karşılık bulduğu üç odak alanı aşağıdadır.</p>
     <div class="ai">
       <article>
         <span class="k">RF–Aviyonik</span>
         <h3>Sinyal sınıflandırma</h3>
-        <p>Spektrum verisinin öğrenen yöntemlerle ayrıştırılması ve yayın tanımaya yönelik çalışma başlıkları bu alana işlenecek.</p>
+        <p>Spektrum verisinin öğrenen yöntemlerle ayrıştırılması ve yayın tanıma.</p>
       </article>
       <article>
         <span class="k">Otonom–İstihbarat</span>
         <h3>Karar destek</h3>
-        <p>Taktik istihbarat verisinin işlenmesi ve otonom sistemlerde karar destek yaklaşımları bu alana işlenecek.</p>
+        <p>Taktik istihbarat verisinin işlenmesi ve otonom sistemlerde karar destek.</p>
       </article>
       <article>
         <span class="k">EH Doktrin</span>
         <h3>Literatür ve analiz</h3>
-        <p>Yapay zeka destekli literatür taraması, sistem analizi ve teknik raporlama yöntemleri bu alana işlenecek.</p>
+        <p>Yapay zeka destekli literatür taraması, sistem analizi ve teknik raporlama.</p>
       </article>
     </div>
-    <p class="draft"><b>Not</b> Bu bölümün içeriği, eğitim kapsamında yapılan çalışmalar iletildiğinde doldurulacaktır. Kesinleşmemiş hiçbir kazanım sayfaya yazılmamıştır.</p>
   </section>
 
   <section id="iletisim">
@@ -584,13 +460,7 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
           <li><b>İstihbarat</b><i>Osman Fadıl Eliyatkın</i></li>
         </ul>
       </div>
-      <div class="card slot">
-        <span class="chip">Katılmak isteyenler</span>
-        <h3>Başvuru</h3>
-        <p>Takım hiyerarşisine ve 9 temel doktrine koşulsuz bağlılık, başvurunun ön koşuludur. Başvuru süreci bilgileri bu alana eklenecek.</p>
-      </div>
     </div>
-    <p class="draft"><b>Taslak</b> Kesik çizgiyle işaretli tüm alanlar içerik beklemektedir: 9 doktrin metni, proje kayıtları ve başvuru süreci.</p>
   </section>
 </main>
 
@@ -604,13 +474,6 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
 
 <script>
 (function(){
-  /* eksik görseller: kesik çerçeveli kutuya düş */
-  Array.prototype.forEach.call(document.querySelectorAll('.gal img'), function(img){
-    function fail(){ img.closest('figure').classList.add('no-img'); }
-    img.addEventListener('error', fail);
-    if (img.complete && img.naturalWidth === 0) fail();
-  });
-
   /* mobil menü */
   var nav = document.getElementById('nav'), btn = document.getElementById('menu');
   function setMenu(open){
@@ -640,91 +503,6 @@ ul.doctrine{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', onScroll);
   onScroll();
-
-  /* X-bandı spektrum izi */
-  var cv = document.getElementById('scope');
-  if (!cv) return;
-  var ctx = cv.getContext('2d');
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), seed = 0;
-  function css(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
-  function fit(){
-    var r = cv.getBoundingClientRect();
-    W = Math.max(280, r.width); H = r.height || 258;
-    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  var carriers = [
-    {f:9.37, a:0.78, w:0.055},
-    {f:10.52, a:0.46, w:0.090},
-    {f:8.62, a:0.30, w:0.130}
-  ];
-  function noise(x, t){
-    return Math.sin(x*11.3 + t)*0.5 + Math.sin(x*29.7 - t*1.7)*0.3 + Math.sin(x*61.1 + t*2.3)*0.2;
-  }
-  function draw(t){
-    var padL = 46, padR = 10, padT = 10, padB = 24;
-    var pw = W - padL - padR, ph = H - padT - padB;
-    ctx.clearRect(0, 0, W, H);
-    ctx.strokeStyle = css('--grid'); ctx.lineWidth = 1;
-    ctx.font = '400 9px "IBM Plex Mono", monospace';
-    ctx.fillStyle = css('--ink-3');
-    ctx.textBaseline = 'middle'; ctx.textAlign = 'right';
-    for (var d = -10; d >= -90; d -= 20){
-      var y = padT + ((-10 - d) / 80) * ph;
-      ctx.beginPath(); ctx.moveTo(padL, y + 0.5); ctx.lineTo(W - padR, y + 0.5); ctx.stroke();
-      ctx.fillText(d + ' dBm', padL - 7, y);
-    }
-    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-    for (var g = 8; g <= 12; g++){
-      var x = padL + ((g - 8) / 4) * pw;
-      ctx.beginPath(); ctx.moveTo(x + 0.5, padT); ctx.lineTo(x + 0.5, padT + ph); ctx.stroke();
-      ctx.fillText(g.toFixed(1), x, padT + ph + 7);
-    }
-    ctx.textAlign = 'left'; ctx.fillText('GHz', padL, padT + ph + 7);
-
-    var pts = [], steps = Math.max(120, Math.round(pw));
-    for (var i = 0; i <= steps; i++){
-      var fx = i / steps, f = 8 + fx * 4;
-      var v = 0.10 + noise(fx * 6, t) * 0.035;
-      for (var c = 0; c < carriers.length; c++){
-        var cr = carriers[c], dz = (f - cr.f) / cr.w;
-        v += cr.a * Math.exp(-dz * dz) * (1 + Math.sin(t * 3 + c * 2) * 0.03);
-      }
-      pts.push([padL + fx * pw, padT + ph - Math.min(v, 1) * ph]);
-    }
-    var fill = ctx.createLinearGradient(0, padT, 0, padT + ph);
-    fill.addColorStop(0, css('--signal-soft')); fill.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.beginPath(); ctx.moveTo(pts[0][0], padT + ph);
-    for (var p = 0; p < pts.length; p++) ctx.lineTo(pts[p][0], pts[p][1]);
-    ctx.lineTo(pts[pts.length - 1][0], padT + ph); ctx.closePath();
-    ctx.fillStyle = fill; ctx.fill();
-
-    ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
-    for (var q = 1; q < pts.length; q++) ctx.lineTo(pts[q][0], pts[q][1]);
-    ctx.strokeStyle = css('--signal'); ctx.lineWidth = 1.4; ctx.lineJoin = 'round'; ctx.stroke();
-
-    var acc = css('--accent'), main = carriers[0];
-    var mx = padL + ((main.f - 8) / 4) * pw;
-    var my = padT + ph - Math.min(main.a + 0.10, 1) * ph;
-    ctx.strokeStyle = acc; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
-    ctx.beginPath(); ctx.moveTo(mx, my - 4); ctx.lineTo(mx, padT + ph); ctx.stroke();
-    ctx.setLineDash([]);
-    ctx.fillStyle = acc;
-    ctx.beginPath(); ctx.arc(mx, my, 3, 0, Math.PI * 2); ctx.fill();
-    ctx.font = '500 9.5px "IBM Plex Mono", monospace';
-    ctx.textAlign = mx > W - 110 ? 'right' : 'left'; ctx.textBaseline = 'bottom';
-    ctx.fillText('9.37 GHz', mx + (mx > W - 110 ? -6 : 6), my - 5);
-  }
-  fit(); draw(0);
-  window.addEventListener('resize', function(){ fit(); draw(seed); });
-  if (!still){
-    var last = 0;
-    (function loop(ts){
-      if (ts - last > 55){ seed += 0.055; draw(seed); last = ts; }
-      requestAnimationFrame(loop);
-    })(0);
-  }
 })();
 </script>
 
