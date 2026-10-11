@@ -24,3 +24,13 @@ Statik site olduğu için ayar gerekmez:
 1. vercel.com → Add New → Project → `btkimeje` reposunu içe aktar
 2. Framework Preset: **Other**, Build Command ve Output Directory boş
 3. Deploy
+
+## Paylaşım kartı (WhatsApp / sosyal medya)
+
+`images/og.png` (1200×630) link önizlemesinde görünen bannerdır.
+Open Graph etiketleri mutlak adres kullanır; **yayın adresi değişirse**
+`index.html` içindeki `og:url`, `og:image` ve `twitter:image` değerlerini
+gerçek alan adıyla güncelle. Şu an tanımlı adres: `https://btkimeje.vercel.app/`
+
+WhatsApp önizlemeyi önbelleğe alır; güncelledikten sonra linkin sonuna
+`?v=2` ekleyerek test edebilirsin.
