@@ -162,6 +162,7 @@ p:last-child{margin-bottom:0}
 /* ── takım görselleri ────────────────────── */
 .gal{columns:3;column-gap:14px}
 .gal img{width:100%;height:auto;margin:0 0 14px;break-inside:avoid;border:1px solid var(--line);border-radius:3px}
+.gal__hint{display:none}
 
 /* ── yapay zeka ──────────────────────────── */
 .ai{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-top:4px}
@@ -210,7 +211,17 @@ p:last-child{margin-bottom:0}
   .hero__sub{font-size:18px}
   .lede{font-size:17px}
   .specs{grid-template-columns:repeat(2,1fr)}
-  .gal{columns:1}
+  /* mobilde görseller sağa kaydırmalı şerit */
+  .gal{
+    columns:auto;display:flex;align-items:center;gap:12px;
+    overflow-x:auto;overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    margin-inline:-18px;padding:0 18px 4px;
+    scrollbar-width:none;
+  }
+  .gal::-webkit-scrollbar{display:none}
+  .gal img{flex:0 0 84%;margin:0;scroll-snap-align:center}
+  .gal__hint{display:block;margin:14px 0 0;font-size:13.5px;color:var(--ink-3)}
   .fields li{grid-template-columns:1fr;gap:2px}
   .foot__in{flex-direction:column;gap:10px}
 }
@@ -233,11 +244,11 @@ p:last-child{margin-bottom:0}
     </button>
     <nav class="nav" id="nav" aria-label="Sayfa bölümleri">
       <a href="#kimlik">Kimlik</a>
+      <a href="#galeri">Galeri</a>
       <a href="#vizyon">Vizyon</a>
       <a href="#birimler">Birimler</a>
       <a href="#basarilar">Başarılar</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#yapay-zeka">Yapay Zeka</a>
+      <a href="#yapay-zeka">BTK Akademi</a>
       <a href="#iletisim">İletişim</a>
     </nav>
   </div>
@@ -286,6 +297,20 @@ p:last-child{margin-bottom:0}
         <cite>İMEJE kuruluş yaklaşımı</cite>
       </blockquote>
     </div>
+  </section>
+
+  <section id="galeri">
+    <span class="eyebrow">Galeri</span>
+    <h2>Takım görselleri</h2>
+    <div class="gal">
+      <img src="images/astro-final.jpg" alt="İMEJE Team bayrağını tutan takım kadrosu, TUA ASTRO Hackathon salonunda." loading="lazy" width="1091" height="794">
+      <img src="images/astro-ikincilik.jpg" alt="Sahnede İkincilik Ödülü tabelasını tutan İMEJE ekibi." loading="lazy" width="1536" height="2048">
+      <img src="images/bakan-ziyareti.jpg" alt="Takım masasında proje tanıtımı yapan İMEJE üyesi ve ziyaretçi protokol heyeti." loading="lazy" width="1151" height="719">
+      <img src="images/cop31.jpg" alt="Climate iDEAthon ödül töreninde COP31 panosunu tutan İMEJE ekibi." loading="lazy" width="477" height="300">
+      <img src="images/mavera.jpg" alt="MAVERA projesinin sahnede sunumu." loading="lazy" width="435" height="300">
+      <img src="images/atolye-calisma.jpg" alt="Gece boyunca dizüstü bilgisayarlarla çalışan ekip üyeleri." loading="lazy" width="1200" height="861">
+    </div>
+    <p class="gal__hint">Görselleri görmek için yana kaydırın.</p>
   </section>
 
   <section id="vizyon">
@@ -373,38 +398,25 @@ p:last-child{margin-bottom:0}
     </ol>
   </section>
 
-  <section id="galeri">
-    <span class="eyebrow">Galeri</span>
-    <h2>Takım görselleri</h2>
-    <div class="gal">
-      <img src="images/astro-final.jpg" alt="İMEJE Team bayrağını tutan takım kadrosu, TUA ASTRO Hackathon salonunda." loading="lazy" width="1091" height="794">
-      <img src="images/astro-ikincilik.jpg" alt="Sahnede İkincilik Ödülü tabelasını tutan İMEJE ekibi." loading="lazy" width="1536" height="2048">
-      <img src="images/bakan-ziyareti.jpg" alt="Takım masasında proje tanıtımı yapan İMEJE üyesi ve ziyaretçi protokol heyeti." loading="lazy" width="1151" height="719">
-      <img src="images/cop31.jpg" alt="Climate iDEAthon ödül töreninde COP31 panosunu tutan İMEJE ekibi." loading="lazy" width="477" height="300">
-      <img src="images/mavera.jpg" alt="MAVERA projesinin sahnede sunumu." loading="lazy" width="435" height="300">
-      <img src="images/atolye-calisma.jpg" alt="Gece boyunca dizüstü bilgisayarlarla çalışan ekip üyeleri." loading="lazy" width="1200" height="861">
-    </div>
-  </section>
-
   <section id="yapay-zeka">
-    <span class="eyebrow">BTK Akademi</span>
-    <h2>Yapay zeka eğitimi</h2>
-    <p class="lede">Bu sayfa, BTK Akademi Yapay Zeka Eğitimi kapsamında hazırlanmıştır. Eğitimde edinilen yetkinliklerin takım birimlerinde karşılık bulduğu üç odak alanı aşağıdadır.</p>
+    <span class="eyebrow">Bilgi</span>
+    <h2>BTK Akademi ve GENÇ2030</h2>
+    <p class="lede">Bu sayfa, BTK Akademi Yapay Zeka Eğitimi kapsamında hazırlanmıştır. Eğitimin ve bağlı olduğu gençlik programının kısa bir özeti aşağıdadır.</p>
     <div class="ai">
       <article>
-        <span class="k">RF ve Aviyonik</span>
-        <h3>Sinyal sınıflandırma</h3>
-        <p>Spektrum verisinin öğrenen yöntemlerle ayrıştırılması ve yayın tanıma.</p>
+        <span class="k">Platform</span>
+        <h3>BTK Akademi nedir?</h3>
+        <p>Bilgi Teknolojileri ve İletişim Kurumu tarafından yürütülen, Türkiye’nin en büyük yerli ve milli çevrim içi eğitim portalıdır. Yazılım, siber güvenlik, veri bilimi ve yapay zekâ gibi alanlarda herkese açık, ücretsiz ve sertifikalı eğitimler sunar.</p>
       </article>
       <article>
-        <span class="k">Otonom Sistemler ve İstihbarat</span>
-        <h3>Karar destek</h3>
-        <p>Taktik istihbarat verisinin işlenmesi ve otonom sistemlerde karar destek.</p>
+        <span class="k">Eğitim</span>
+        <h3>Yapay zeka eğitimiyle ne amaçlanıyor?</h3>
+        <p>Yapay zekânın temel kavramlarını, üretken yapay zekâ araçlarını ve istem (prompt) mühendisliğini öğreterek katılımcıların bu teknolojiyi tüketen değil üreten tarafta kullanmasını sağlamak; öğrendiklerini kendi projelerine aktarabilecek yetkinliğe ulaştırmak hedeflenir.</p>
       </article>
       <article>
-        <span class="k">EH Doktrin ve Araştırma</span>
-        <h3>Literatür ve analiz</h3>
-        <p>Yapay zeka destekli literatür taraması, sistem analizi ve teknik raporlama.</p>
+        <span class="k">Program</span>
+        <h3>GENÇ2030 projesi nedir?</h3>
+        <p>Gençlik ve Spor Bakanlığı’nın yürüttüğü Dijital Yetkinlikler ve Yapay Zekâ Atölyesi projesidir. 81 ildeki gençlik merkezlerinin bilişim atölyelerini yapay zekâ atölyelerine dönüştürerek 15–25 yaş arası gençleri kapsar; 2030’a kadar 100 bin yapay zekâ girişimcisi yetiştirmeyi hedefler. Eğitim içerikleri BTK Akademi iş birliğiyle sağlanır.</p>
       </article>
     </div>
   </section>
